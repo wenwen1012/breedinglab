@@ -1,5 +1,6 @@
-# 本测试仓库只同步这一份飞书知识库文档。
+# BreedingLab 飞书文档同步配置
 docs:
-  - feishu_url: "https://a2eb1ewtyj.feishu.cn/wiki/UQPnwnoiciRYcKk3SB3ckR4snzb"
+  - feishu_url: "https://ycnzo13h3y16.feishu.cn/wiki/PNpOwBvP5i4u68kMIcicn0sxnYb"
     target: "content/docs/breedinglab.zh.md"
     weight: 1
+
