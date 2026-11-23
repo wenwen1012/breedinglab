@@ -46,7 +46,7 @@ cleanup() { rm -rf "$TMP_DIR"; }
 trap cleanup EXIT
 
 echo "Downloading the configured Feishu document..."
-feishu2md dl "$DOC_URL" -o "$TMP_DIR"
+feishu2md dl --output "$TMP_DIR" "$DOC_URL"
 
 MD_FILE="$(find "$TMP_DIR" -type f -name '*.md' -print -quit)"
 if [[ -z "${MD_FILE:-}" ]]; then
