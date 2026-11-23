@@ -1,0 +1,18 @@
+{{ define "main" }}
+<section class="hero">
+  <p class="eyebrow">BREEDINGLAB DOCUMENTATION</p>
+  <h1>多源育种数据处理与智能组配</h1>
+  <p>飞书文档自动同步站点。文档内容以飞书为唯一维护源。</p>
+</section>
+<section class="doc-list">
+  <h2>文档</h2>
+  {{ $docs := where site.RegularPages "Section" "docs" }}
+  {{ range sort $docs "Weight" }}
+    <a class="doc-link" href="{{ .RelPermalink }}">
+      <span>{{ .Title }}</span><span aria-hidden="true">→</span>
+    </a>
+  {{ else }}
+    <p class="muted">文档尚未同步。请在 GitHub Actions 中运行 “Sync Feishu document and publish site”。</p>
+  {{ end }}
+</section>
+{{ end }}

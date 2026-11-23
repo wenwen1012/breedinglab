@@ -1,0 +1,13 @@
+baseURL = "https://wenwen1012.github.io/breedinglab/"
+languageCode = "zh-cn"
+title = "BreedingLab 文档"
+defaultContentLanguage = "zh-cn"
+enableRobotsTXT = true
+
+[params]
+  description = "BreedingLab 多源育种数据处理与智能组配文档"
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = false

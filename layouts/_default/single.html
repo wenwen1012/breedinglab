@@ -1,0 +1,7 @@
+{{ define "main" }}
+<article class="article">
+  <nav class="breadcrumb"><a href="{{ "/" | relURL }}">首页</a> / 文档</nav>
+  <h1>{{ .Title }}</h1>
+  <div class="content">{{ .Content }}</div>
+</article>
+{{ end }}
