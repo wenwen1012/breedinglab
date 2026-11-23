@@ -1,10 +1,8 @@
 ---
-title: "BreedingLab｜ 多源育种数据处理与智能组配 (1)"
+title: "BreedingLab｜ 多源育种数据处理与智能组配"
 weight: 1
 language: zh
 ---
-
-# BreedingLab｜ 多源育种数据处理与智能组配
 
 # 01 数据集详解
 
@@ -12,24 +10,24 @@ language: zh
 
 ### 一、训练集（2014—2021）
 
-- [田间产量与性状记录 ｜ 表型数据](https://a2eb1ewtyj.feishu.cn/wiki/UQPnwnoiciRYcKk3SB3ckR4snzb#share-AgDzdxlC7oqvxvx2zc3cVC0FnSf)
-- [试验地点、地理位置与田间管理信息 ｜ 环境元数据](https://a2eb1ewtyj.feishu.cn/wiki/UQPnwnoiciRYcKk3SB3ckR4snzb#share-ERCrdAMMpog2O9xdyThcP4Sznmb)
-- [土壤养分与理化指标 ｜ 土壤数据](https://a2eb1ewtyj.feishu.cn/wiki/UQPnwnoiciRYcKk3SB3ckR4snzb#share-GaJ4dTNkXohIBVxjsTBc6HzVn88)
-- [逐日温度、降水、湿度与辐射记录 ｜ 气象数据](https://a2eb1ewtyj.feishu.cn/wiki/UQPnwnoiciRYcKk3SB3ckR4snzb#share-BxqudYStYoXEmDx36FWcfZNenqb)
-- [按生育阶段汇总的环境特征 ｜ 环境协变量 EC](https://a2eb1ewtyj.feishu.cn/wiki/UQPnwnoiciRYcKk3SB3ckR4snzb#share-RhJAd5xPcoh6PdxxlF2cdqJ3n8b)
-- [杂交组合的全基因组 SNP 信息 ｜ 基因型 VCF](https://a2eb1ewtyj.feishu.cn/wiki/UQPnwnoiciRYcKk3SB3ckR4snzb#share-F3K1d723loMAy7xEnDvcpdKgnhc)
-- [杂交组合名称、亲本及数据集对应关系 ｜ 杂交种索引](https://a2eb1ewtyj.feishu.cn/wiki/UQPnwnoiciRYcKk3SB3ckR4snzb#share-KQ7HdH2EooeY3Fxgw9tc4ekXnHf)
-- [自交系原始测序数据来源 ｜ 测序来源信息](https://a2eb1ewtyj.feishu.cn/wiki/UQPnwnoiciRYcKk3SB3ckR4snzb#share-WQTad11ypo6OWex3lKIczhoEnIb)
-- [补充 BioProject 编号的测序来源 ｜ 测序来源](https://a2eb1ewtyj.feishu.cn/wiki/UQPnwnoiciRYcKk3SB3ckR4snzb#share-CB0md05vdoBLZtxatV3cVaHLnpg)
+1. [田间产量与性状记录 ｜ 表型数据](https://ycnzo13h3y16.feishu.cn/wiki/PNpOwBvP5i4u68kMIcicn0sxnYb?create_from=create_doc_to_wiki&from=wiki#share-Vp35dp089ocTd4xmX5ycGt28nhe)
+2. [试验地点、地理位置与田间管理信息 ｜ 环境元数据](https://ycnzo13h3y16.feishu.cn/wiki/PNpOwBvP5i4u68kMIcicn0sxnYb?create_from=create_doc_to_wiki&from=wiki#share-NLRJdf2Lvogg5Qxw4qHc3n84n6f)
+3. [土壤养分与理化指标 ｜ 土壤数据](https://ycnzo13h3y16.feishu.cn/wiki/PNpOwBvP5i4u68kMIcicn0sxnYb?create_from=create_doc_to_wiki&from=wiki#share-GIbOdHiK5oQ0CzxnL32ceQZmnYb)
+4. [逐日温度、降水、湿度与辐射记录 ｜ 气象数据](https://ycnzo13h3y16.feishu.cn/wiki/PNpOwBvP5i4u68kMIcicn0sxnYb?create_from=create_doc_to_wiki&from=wiki#share-MykNdtxjmoxvL8xGJEwcglVrnfe)
+5. [按生育阶段汇总的环境特征 ｜ 环境协变量 EC](https://ycnzo13h3y16.feishu.cn/wiki/PNpOwBvP5i4u68kMIcicn0sxnYb?create_from=create_doc_to_wiki&from=wiki#share-Oa1Nd8rhNoPYpUxKIc8cAutMnNf)
+6. [杂交组合的全基因组 SNP 信息 ｜ 基因型 VCF](https://ycnzo13h3y16.feishu.cn/wiki/PNpOwBvP5i4u68kMIcicn0sxnYb?create_from=create_doc_to_wiki&from=wiki#share-NDkRdyvXnoAUW7x2nLWcjrG1nzh)
+7. [杂交组合名称、亲本及数据集对应关系 ｜ 杂交种索引](https://a2eb1ewtyj.feishu.cn/wiki/UQPnwnoiciRYcKk3SB3ckR4snzb#share-KQ7HdH2EooeY3Fxgw9tc4ekXnHf)
+8. [自交系原始测序数据来源 ｜ 测序来源信息](https://ycnzo13h3y16.feishu.cn/wiki/PNpOwBvP5i4u68kMIcicn0sxnYb?create_from=create_doc_to_wiki&from=wiki#share-JLLCdDdU3oJ1crx84bqc32p3nRI)
+9. [补充 BioProject 编号的测序来源 ｜ 测序来源](https://ycnzo13h3y16.feishu.cn/wiki/PNpOwBvP5i4u68kMIcicn0sxnYb?create_from=create_doc_to_wiki&from=wiki#share-LE09dyNZno6jjSxs1pEcFPEDnwf)
 
 ### 二、测试集（2022）
 
-- [待预测的环境 × 杂交组合清单 ｜ 产量提交模板](https://a2eb1ewtyj.feishu.cn/wiki/UQPnwnoiciRYcKk3SB3ckR4snzb#share-NiKBdvwSkoOoEdxC91oc5UbgnYe)
-- [2022 年试验地点、地理位置与田间管理信息 ｜ 环境元数据](https://a2eb1ewtyj.feishu.cn/wiki/UQPnwnoiciRYcKk3SB3ckR4snzb#share-RCKIdndbNoKuOKxJiaEcAh33nNh)
-- [2022 年土壤养分与理化指标 ｜ 土壤数据](https://a2eb1ewtyj.feishu.cn/wiki/UQPnwnoiciRYcKk3SB3ckR4snzb#share-HGPXdABRzobc7lxhEhsckkIBnpb)
-- [2022 年逐日温度、降水、湿度与辐射记录 ｜ 气象数据](https://a2eb1ewtyj.feishu.cn/wiki/UQPnwnoiciRYcKk3SB3ckR4snzb#share-SkGZdqoQro6vn6xeQS7cSNrfnpd)
-- [2022 年按生育阶段汇总的环境特征 ｜ 环境协变量 EC](https://a2eb1ewtyj.feishu.cn/wiki/UQPnwnoiciRYcKk3SB3ckR4snzb#share-Nac8dVkdaoTiZbxkIrXcXiIhnBb)
-- [2022 年真实产量观测 ｜ 模型最终评估答案](https://a2eb1ewtyj.feishu.cn/wiki/UQPnwnoiciRYcKk3SB3ckR4snzb#share-Z3IUdi4WuoSbmWxxKnPcqUyGncb)
+1. [待预测的环境 × 杂交组合清单 ｜ 产量提交模板](https://ycnzo13h3y16.feishu.cn/wiki/PNpOwBvP5i4u68kMIcicn0sxnYb?create_from=create_doc_to_wiki&from=wiki#share-CXQ0dJhthon0rdxfpwfcaCAWnVb)
+2. [2022 年试验地点、地理位置与田间管理信息 ｜ 环境元数据](https://ycnzo13h3y16.feishu.cn/wiki/PNpOwBvP5i4u68kMIcicn0sxnYb?create_from=create_doc_to_wiki&from=wiki#share-QimMdMcEnoJSnIxnuJicKhm1n9b)
+3. [2022 年土壤养分与理化指标 ｜ 土壤数据](https://ycnzo13h3y16.feishu.cn/wiki/PNpOwBvP5i4u68kMIcicn0sxnYb?create_from=create_doc_to_wiki&from=wiki#share-WCQhdTEqJowT1Lx30xVckW7un8e)
+4. [2022 年逐日温度、降水、湿度与辐射记录 ｜ 气象数据](https://ycnzo13h3y16.feishu.cn/wiki/PNpOwBvP5i4u68kMIcicn0sxnYb?create_from=create_doc_to_wiki&from=wiki#share-U404dJYEfoNR4OxxzfzcWao6nbv)
+5. [2022 年按生育阶段汇总的环境特征 ｜ 环境协变量 EC](https://ycnzo13h3y16.feishu.cn/wiki/PNpOwBvP5i4u68kMIcicn0sxnYb?create_from=create_doc_to_wiki&from=wiki#share-VG0ad4qhPoWUNZx0DpWcsu9fnEc)
+6. [2022 年真实产量观测 ｜ 模型最终评估答案](https://ycnzo13h3y16.feishu.cn/wiki/PNpOwBvP5i4u68kMIcicn0sxnYb?create_from=create_doc_to_wiki&from=wiki#share-CapMdyzKqoXWsWxpyV9csWGen6d)
 
 ### 三，数据来源
 
@@ -3049,5 +3047,3 @@ predictions = model.predict(test_data)
 # **05 表型预测与组配推荐**
 
 # **06 结果可视化与决策报告输出**
-
-> （注：部分内容由豆包工作 AI 生成）
