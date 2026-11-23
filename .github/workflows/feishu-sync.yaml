@@ -32,8 +32,22 @@ jobs:
         with:
           go-version: "1.23"
 
+      
       - name: Install feishu2md
-        run: go install github.com/Wsine/feishu2md/cmd/feishu2md@latest
+        run: |
+          curl -fL --retry 3 \
+            https://github.com/Wsine/feishu2md/releases/download/v2.4.5/feishu2md-v2.4.5-linux-amd64.tar.gz \
+            -o /tmp/feishu2md.tar.gz
+
+          mkdir -p /tmp/feishu2md
+          tar -xzf /tmp/feishu2md.tar.gz -C /tmp/feishu2md
+
+          BIN="$(find /tmp/feishu2md -type f -name feishu2md -print -quit)"
+          test -n "$BIN"
+          sudo install "$BIN" /usr/local/bin/feishu2md
+
+          feishu2md --version
+
 
       - name: Set up Python
         uses: actions/setup-python@v5
