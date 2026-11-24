@@ -1,24 +1,250 @@
-* { box-sizing: border-box; }
-:root { color-scheme: light; --ink: #202938; --muted: #667085; --line: #e5e9f0; --accent: #315f9b; }
-body { margin: 0; color: var(--ink); background: #fff; font: 16px/1.75 system-ui, -apple-system, "Segoe UI", sans-serif; }
-.site-header { height: 64px; display: flex; align-items: center; gap: 18px; padding: 0 max(24px, calc((100vw - 1040px)/2)); border-bottom: 1px solid var(--line); color: var(--muted); }
-.brand { color: var(--ink); font-weight: 700; text-decoration: none; font-size: 19px; }
-.container { max-width: 920px; min-height: calc(100vh - 130px); margin: 0 auto; padding: 56px 24px 80px; }
-.hero { padding: 30px 0 42px; border-bottom: 1px solid var(--line); }
-.eyebrow { color: var(--accent); font-size: 12px; letter-spacing: .14em; font-weight: 700; }
-h1 { line-height: 1.3; font-size: clamp(30px, 5vw, 44px); margin: 12px 0; }
-h2 { font-size: 23px; }
-.hero p:last-child, .muted { color: var(--muted); }
-.doc-list { padding-top: 28px; }
-.doc-link { display: flex; justify-content: space-between; padding: 16px 2px; border-bottom: 1px solid var(--line); color: var(--accent); text-decoration: none; }
-.doc-link:hover { color: #173e70; }
-.article { max-width: 820px; margin: 0 auto; }
-.article h1 { font-size: 36px; padding-bottom: 20px; border-bottom: 1px solid var(--line); }
-.breadcrumb { color: var(--muted); font-size: 14px; margin-bottom: 22px; }
-.breadcrumb a { color: var(--accent); text-decoration: none; }
-.content img { max-width: 100%; height: auto; }
-.content table { display: block; max-width: 100%; overflow-x: auto; border-collapse: collapse; }
-.content th, .content td { border: 1px solid var(--line); padding: 8px 12px; }
-.content pre { overflow-x: auto; padding: 16px; background: #f5f7fa; border-radius: 8px; }
-.content blockquote { margin-left: 0; padding: 2px 18px; border-left: 3px solid #b9c9df; color: var(--muted); }
-.site-footer { border-top: 1px solid var(--line); padding: 20px 24px; text-align: center; color: var(--muted); font-size: 13px; }
+
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  color-scheme: light;
+  --ink: #202938;
+  --muted: #667085;
+  --line: #e5e9f0;
+  --accent: #315f9b;
+}
+
+body {
+  margin: 0;
+  color: var(--ink);
+  background: #fff;
+  font: 16px/1.75 system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+
+.site-header {
+  height: 64px;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  padding: 0 max(24px, calc((100vw - 1040px)/2));
+  border-bottom: 1px solid var(--line);
+  color: var(--muted);
+}
+
+.brand {
+  color: var(--ink);
+  font-weight: 700;
+  text-decoration: none;
+  font-size: 19px;
+}
+
+.container {
+  max-width: 920px;
+  min-height: calc(100vh - 130px);
+  margin: 0 auto;
+  padding: 56px 24px 80px;
+}
+
+.hero {
+  padding: 30px 0 42px;
+  border-bottom: 1px solid var(--line);
+}
+
+.eyebrow {
+  color: var(--accent);
+  font-size: 12px;
+  letter-spacing: .14em;
+  font-weight: 700;
+}
+
+h1 {
+  line-height: 1.3;
+  font-size: clamp(30px, 5vw, 44px);
+  margin: 12px 0;
+}
+
+h2 {
+  font-size: 23px;
+}
+
+.hero p:last-child,
+.muted {
+  color: var(--muted);
+}
+
+.doc-list {
+  padding-top: 28px;
+}
+
+.doc-link {
+  display: flex;
+  justify-content: space-between;
+  padding: 16px 2px;
+  border-bottom: 1px solid var(--line);
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.doc-link:hover {
+  color: #173e70;
+}
+
+.article {
+  max-width: 820px;
+  margin: 0 auto;
+  min-width: 0;
+}
+
+.article h1 {
+  font-size: 36px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--line);
+}
+
+.breadcrumb {
+  color: var(--muted);
+  font-size: 14px;
+  margin-bottom: 22px;
+}
+
+.breadcrumb a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+/* 图片 */
+.content img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* 表格 */
+.content table {
+  display: block;
+  max-width: 100%;
+  overflow-x: auto;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.content th,
+.content td {
+  border: 1px solid var(--line);
+  padding: 8px 12px;
+}
+
+/* 代码块：背景、边框、字体和横向滚动 */
+.content pre,
+.content .highlight pre {
+  display: block;
+  max-width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding: 16px 18px;
+  margin: 20px 0;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #f6f8fa;
+  color: #24292f;
+  font-family: Consolas, "Courier New", monospace;
+  font-size: 14px;
+  line-height: 1.7;
+  tab-size: 4;
+
+  /* 保留代码原始换行和缩进 */
+  white-space: pre;
+  overflow-wrap: normal;
+  word-break: normal;
+
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Hugo 代码高亮容器 */
+.content .highlight {
+  max-width: 100%;
+  overflow-x: auto;
+  margin: 20px 0;
+  border-radius: 8px;
+}
+
+/* 代码块内部 */
+.content pre code,
+.content .highlight pre code {
+  display: block;
+  padding: 0;
+  margin: 0;
+  border: none;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  white-space: inherit;
+  overflow-wrap: normal;
+  word-break: normal;
+}
+
+/* 行内代码 */
+.content :not(pre) > code {
+  padding: 2px 6px;
+  margin: 0 2px;
+  border-radius: 4px;
+  background: #f0f2f5;
+  color: #c7254e;
+  font-family: Consolas, "Courier New", monospace;
+  font-size: 0.9em;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
+/* 流程图、ASCII 图保持等宽字体和缩进 */
+.content pre,
+.content pre code {
+  white-space: pre;
+}
+
+/* 数学公式：MathJax */
+.content mjx-container {
+  max-width: 100%;
+}
+
+.content mjx-container[display="true"] {
+  display: block;
+  margin: 20px 0;
+  padding: 4px 0;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+/* 引用 */
+.content blockquote {
+  margin-left: 0;
+  padding: 2px 18px;
+  border-left: 3px solid #b9c9df;
+  color: var(--muted);
+}
+
+/* 页脚 */
+.site-footer {
+  border-top: 1px solid var(--line);
+  padding: 20px 24px;
+  text-align: center;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+/* 移动端适配 */
+@media (max-width: 768px) {
+  .container {
+    padding: 32px 16px 60px;
+  }
+
+  .article h1 {
+    font-size: 28px;
+  }
+
+  .content pre,
+  .content .highlight pre {
+    font-size: 13px;
+    padding: 12px;
+  }
+
+  .content table {
+    font-size: 14px;
+  }
+}
