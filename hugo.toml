@@ -11,3 +11,9 @@ enableRobotsTXT = true
   [markup.goldmark]
     [markup.goldmark.renderer]
       unsafe = false
+[markup.highlight]
+  codeFences = true
+  guessSyntax = false
+  noClasses = true
+  style = "github"
+  lineNos = false
